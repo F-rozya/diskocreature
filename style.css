@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-decoration-line: none ;
+    border: none;
+    outline: none;
+    list-style-type: none;
+    transition: 0.1s;
+}
+::-webkit-scrollbar{
+    width: 0.5vw;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #444;
+
+}
+::-webkit-scrollbar-track{
+    background-color: #222;
+}
+
+body{
+    background-color: #222;
+    min-height: 100vh;
+    --mouse-X:0px;
+    --mouse-Y:0px;
+    overflow-x: hidden;
+}
+
+.--flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.wrapper{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.block {
+    margin: auto;
+    width: 40vw;
+    height: 40vw;
+    background-color: #335;
+    border-radius: 10%;
+    flex: 100%;
+}
+.block__2{
+    width: 90%;
+    height: 90%;
+    background-color: #224;
+    border-radius: 15%;
+    box-shadow: 0vw 0vw 5vw #fff;
+}
+.block__3{
+    width: 85%;
+    height: 85%;
+    background-color: #113;
+    border-radius: 20%;
+}
+.block__4{
+    width: 80%;
+    height: 80%;
+    background-color: #002;
+    border-radius: 25%;
+}
+.eye{
+    width: 75%;
+    height: 75%;
+    background-color: #ddd;
+    border-radius: 30%;
+    overflow: hidden;
+    box-shadow: 0 0 2vw #000;
+}
+.pupil{
+    width: 8vw;
+    height: 8vw;
+    background-color: #000;
+    border-radius: 100vw;
+}
+.--hover:hover{
+    transform: scale(1.05) translateX(calc(var(--mouse-X) / 20)) translateY(calc(var(--mouse-Y) / 20));
+    transition: 0.2s;
+}
+.blink{
+    transform: 0.1s;
+}
+.pupilTrigger{
+    background-color: #002;
+}
+
+.--mousemove{
+    transform: translateX(calc(var(--mouse-X) / 20)) translateY(calc(var(--mouse-Y) / 20));
+}
+
+.hand{
+    background-color: #aaa;
+    width: 20vw;
+    height: 10vw;
+    border-radius: 10vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    transform: translateX(calc(var(--mouse-X) / 5)) translateY(calc(var(--mouse-Y) / 1.3));
+    box-shadow: 0 0 5vw #fff;
+}
+.hand:active{
+    transform: translateX(calc(var(--mouse-X) / 5)) translateY(calc(var(--mouse-Y) / 1.3)) scale(1.2);
+}
+
+.style-but{
+    position: absolute;
+    background-color: #000;
+    border-radius: 100vw;
+    width: 2vw;
+    height: 2vw;
+    left: 1vw;
+    top: 1vw;
+    cursor: pointer;
+    color: #aaa;
+    font-size: 1vw;
+}
+.style-but:hover{
+    transform: scale(1.1);
+}
+.--transparent{
+    background-color: transparent;
+}
